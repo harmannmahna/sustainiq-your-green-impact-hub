@@ -77,6 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Calculate, reduce, and offset your carbon footprint with gamified eco-action." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SustainIQ — Your Climate Co-Pilot" },
+      { name: "twitter:description", content: "Calculate, reduce, and offset your carbon footprint with gamified eco-action." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1baa3b72-6db1-49ef-abe1-17ab8cbd36d8/id-preview-780db231--70a985ef-8ca1-4478-ba8d-31ef1267c227.lovable.app-1782079043523.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1baa3b72-6db1-49ef-abe1-17ab8cbd36d8/id-preview-780db231--70a985ef-8ca1-4478-ba8d-31ef1267c227.lovable.app-1782079043523.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
