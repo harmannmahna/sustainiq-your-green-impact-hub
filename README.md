@@ -36,3 +36,6 @@ To review the complete application implementation, local state hooks, and backen
 ```bash
 git clone [https://github.com/harmannmahna/sustainiq-your-green-impact-hub.git](https://github.com/harmannmahna/sustainiq-your-green-impact-hub.git)
 cd sustainiq-your-green-impact-hub
+
+### 2. Live Preview
+https://climateco-pilot.lovable.app/
