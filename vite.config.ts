@@ -11,6 +11,12 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    emptyOutDir: true
-  }
+    emptyOutDir: true,
+    rollupOptions: {
+      external: ['node:async_hooks'],
+    },
+  },
+  optimizeDeps: {
+    exclude: ['@tanstack/react-start'],
+  },
 })
