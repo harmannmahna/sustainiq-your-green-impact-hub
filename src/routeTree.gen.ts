@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VampireRouteImport } from './routes/vampire'
+import { Route as RoiRouteImport } from './routes/roi'
+import { Route as ReverseCartRouteImport } from './routes/reverse-cart'
+import { Route as OffsetRouteImport } from './routes/offset'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as ChallengesRouteImport } from './routes/challenges'
+import { Route as CalculatorRouteImport } from './routes/calculator'
+import { Route as BadgesRouteImport } from './routes/badges'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VampireRoute = VampireRouteImport.update({
+  id: '/vampire',
+  path: '/vampire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoiRoute = RoiRouteImport.update({
+  id: '/roi',
+  path: '/roi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReverseCartRoute = ReverseCartRouteImport.update({
+  id: '/reverse-cart',
+  path: '/reverse-cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OffsetRoute = OffsetRouteImport.update({
+  id: '/offset',
+  path: '/offset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChallengesRoute = ChallengesRouteImport.update({
+  id: '/challenges',
+  path: '/challenges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalculatorRoute = CalculatorRouteImport.update({
+  id: '/calculator',
+  path: '/calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BadgesRoute = BadgesRouteImport.update({
+  id: '/badges',
+  path: '/badges',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/badges': typeof BadgesRoute
+  '/calculator': typeof CalculatorRoute
+  '/challenges': typeof ChallengesRoute
+  '/map': typeof MapRoute
+  '/offset': typeof OffsetRoute
+  '/reverse-cart': typeof ReverseCartRoute
+  '/roi': typeof RoiRoute
+  '/vampire': typeof VampireRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/badges': typeof BadgesRoute
+  '/calculator': typeof CalculatorRoute
+  '/challenges': typeof ChallengesRoute
+  '/map': typeof MapRoute
+  '/offset': typeof OffsetRoute
+  '/reverse-cart': typeof ReverseCartRoute
+  '/roi': typeof RoiRoute
+  '/vampire': typeof VampireRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/badges': typeof BadgesRoute
+  '/calculator': typeof CalculatorRoute
+  '/challenges': typeof ChallengesRoute
+  '/map': typeof MapRoute
+  '/offset': typeof OffsetRoute
+  '/reverse-cart': typeof ReverseCartRoute
+  '/roi': typeof RoiRoute
+  '/vampire': typeof VampireRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/badges'
+    | '/calculator'
+    | '/challenges'
+    | '/map'
+    | '/offset'
+    | '/reverse-cart'
+    | '/roi'
+    | '/vampire'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/badges'
+    | '/calculator'
+    | '/challenges'
+    | '/map'
+    | '/offset'
+    | '/reverse-cart'
+    | '/roi'
+    | '/vampire'
+  id:
+    | '__root__'
+    | '/'
+    | '/badges'
+    | '/calculator'
+    | '/challenges'
+    | '/map'
+    | '/offset'
+    | '/reverse-cart'
+    | '/roi'
+    | '/vampire'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BadgesRoute: typeof BadgesRoute
+  CalculatorRoute: typeof CalculatorRoute
+  ChallengesRoute: typeof ChallengesRoute
+  MapRoute: typeof MapRoute
+  OffsetRoute: typeof OffsetRoute
+  ReverseCartRoute: typeof ReverseCartRoute
+  RoiRoute: typeof RoiRoute
+  VampireRoute: typeof VampireRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/vampire': {
+      id: '/vampire'
+      path: '/vampire'
+      fullPath: '/vampire'
+      preLoaderRoute: typeof VampireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roi': {
+      id: '/roi'
+      path: '/roi'
+      fullPath: '/roi'
+      preLoaderRoute: typeof RoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reverse-cart': {
+      id: '/reverse-cart'
+      path: '/reverse-cart'
+      fullPath: '/reverse-cart'
+      preLoaderRoute: typeof ReverseCartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/offset': {
+      id: '/offset'
+      path: '/offset'
+      fullPath: '/offset'
+      preLoaderRoute: typeof OffsetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges': {
+      id: '/challenges'
+      path: '/challenges'
+      fullPath: '/challenges'
+      preLoaderRoute: typeof ChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculator': {
+      id: '/calculator'
+      path: '/calculator'
+      fullPath: '/calculator'
+      preLoaderRoute: typeof CalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/badges': {
+      id: '/badges'
+      path: '/badges'
+      fullPath: '/badges'
+      preLoaderRoute: typeof BadgesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +217,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BadgesRoute: BadgesRoute,
+  CalculatorRoute: CalculatorRoute,
+  ChallengesRoute: ChallengesRoute,
+  MapRoute: MapRoute,
+  OffsetRoute: OffsetRoute,
+  ReverseCartRoute: ReverseCartRoute,
+  RoiRoute: RoiRoute,
+  VampireRoute: VampireRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
