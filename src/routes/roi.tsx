@@ -113,7 +113,7 @@ function ROIPage() {
                   contentStyle={{ background: "white", border: "1px solid oklch(0.90 0.02 145)", borderRadius: 12 }}
                 />
                 <Legend />
-                <Bar dataKey="CO₂" fill="oklch(0.55 0.16 150)" radius={[0, 8, 8, 0]} />
+                <Bar dataKey="CO2" name="CO₂ (kg)" fill="oklch(0.55 0.16 150)" radius={[0, 8, 8, 0]} />
                 <Bar dataKey="Dollars" fill="oklch(0.72 0.13 50)" radius={[0, 8, 8, 0]} />
               </BarChart>
             </ResponsiveContainer>
