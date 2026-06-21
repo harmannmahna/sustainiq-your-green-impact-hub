@@ -41,9 +41,9 @@ function ROIPage() {
 
   const results = levers.map((l) => {
     const r = l.calc(vals[l.id]);
-    return { name: l.title, CO₂: Math.round(r.co2), Dollars: Math.round(r.usd), id: l.id };
+    return { name: l.title, CO2: Math.round(r.co2), Dollars: Math.round(r.usd), id: l.id };
   });
-  const totalCo2 = results.reduce((a, r) => a + r.CO₂, 0);
+  const totalCo2 = results.reduce((a, r) => a + r.CO2, 0);
   const totalUsd = results.reduce((a, r) => a + r.Dollars, 0);
   const pctReduction = footprint.total > 0 ? Math.min(100, Math.round((totalCo2 / footprint.total) * 100)) : 0;
 
